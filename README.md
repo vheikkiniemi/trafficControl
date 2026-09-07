@@ -78,8 +78,8 @@ Files under `db/init/` are executed only when PostgreSQL creates a new empty dat
 If you change the initialization SQL later, either apply the SQL manually or recreate the development database:
 
 ```bash
-docker compose down -v
-docker compose up -d --build
+docker compose down db -v
+docker compose up -d --build db
 ```
 
 **Warning:** `down -v` deletes the PostgreSQL Docker volume and therefore all database data.
