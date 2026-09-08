@@ -10,9 +10,9 @@ CREATE TABLE users (
 INSERT INTO users (id, username, password, created_at) VALUES
     (
         1,
-        'Test',
-        '$2y$10$x6UdgKkkQp30jDrrvPMUxus5CAp4Z7XCaqStLAHSghWxZyAoKck11',
-        '2023-03-18 11:03:50'
+        'Testi',
+        '$2y$12$ccw0UjQ3Mmju3FEBrsGfT.VhXtcJZ64i9b.HW9ZVP3PgkPvuVM7ku',
+        '2026-09-08 05:02:28.660923'
     );
 
 -- MariaDB AUTO_INCREMENT was 21, so make PostgreSQL continue from 21.
