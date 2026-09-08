@@ -5,6 +5,7 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: legacy-php-web
+    hostname: legacy-php-web
     restart: unless-stopped
     ports:
       - "8080:80"
@@ -25,6 +26,7 @@ services:
   db:
     image: postgres:17-alpine
     container_name: legacy-php-db
+    hostname: legacy-php-db
     restart: unless-stopped
     environment:
       POSTGRES_DB: ${DB_NAME}
@@ -42,6 +44,7 @@ services:
   #adminer:
   #  image: adminer:latest
   #  container_name: legacy-php-adminer
+  #  hostname: legacy-php-adminer
   #  restart: unless-stopped
   #  ports:
   #    - "8081:8080"
