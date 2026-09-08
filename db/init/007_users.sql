@@ -7,7 +7,7 @@ CREATE TABLE users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-# username: Test, password: Sala1234#
+-- username: Test, password: Sala1234#
 
 INSERT INTO users (id, username, password, created_at) VALUES
     (
