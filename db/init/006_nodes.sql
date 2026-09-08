@@ -10,11 +10,10 @@ CREATE TABLE nodes (
 
 INSERT INTO nodes (id, nodeid, nodekey, password, created_at) VALUES
     (
-        5,
-        'Node2',
-        'e7f6c011776e8db7cd330b54174fd76f7d0216b612387a5ffcfb81e6f0919683',
-        '$2y$10$OKh.A9KicThILRWYQBILVOcJHgwsmbbc1oV2.YQVuBO86nrdKD7h.',
-        '2020-03-20 12:11:34'
+        1,
+        'Home1',
+        '08dfcfc0c263d2817400a375869541c7714ed3b11ffb073902a0720eb0e47979',
+        '$2y$12$5W11TWg6rFI92VDlWEzsk.uK7u9bwWUuE5Nby/RpkbSeqOI1oqICK'
     );
 
 SELECT setval(

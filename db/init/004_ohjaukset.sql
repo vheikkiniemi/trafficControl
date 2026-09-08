@@ -8,15 +8,4 @@ CREATE TABLE ohjaukset (
     time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-INSERT INTO ohjaukset (id, state, username, ip, time) VALUES
-    (44, TRUE, 'XXX', '87.95.59.87', '2023-03-18 13:38:06'),
-    (45, TRUE, 'XXX', '213.186.232.162', '2023-03-21 12:40:26'),
-    (46, TRUE, 'XXX', '176.93.231.96', '2023-03-23 13:46:00');
-
--- Continue automatically generated IDs after the imported data.
-SELECT setval(
-    pg_get_serial_sequence('ohjaukset', 'id'),
-    (SELECT MAX(id) FROM ohjaukset)
-);
-
 COMMIT;

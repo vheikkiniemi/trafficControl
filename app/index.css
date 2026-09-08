@@ -1,0 +1,129 @@
+* {
+	margin: 0;
+	padding: 0;
+	border-collapse: collapse;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+#center {
+	left: 10%;
+	width: 80%;
+	position: relative;
+}
+
+#header {
+	height: 5%;
+	width: 100%;
+	text-align: center;
+	padding: 1% 0 1% 0;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+#painikkeet {
+	background-color: #1ABC9C;
+	width: 100%;
+}
+
+#onlogin, #nologin {
+	width:80%;
+	float: left;
+	font-weight: bold;
+	background-color: #4BA1EA;
+	text-align: center;
+	color: white;
+	border-radius: 5px;
+	padding: 1% 0 1% 0;
+	font-size: 1.1em;
+	margin-bottom: 1%;
+	cursor: pointer;
+}
+
+#login, #logoff {
+	width:19%;
+	float: right;
+	font-weight: bold;
+	background-color: #415993;
+	text-align: center;
+	color: white;
+	border-radius: 5px;
+	padding: 1% 0 1% 0;
+	font-size: 1.1em;
+	margin-bottom: 1%;
+}
+
+.ohjaus_mouse_over {
+	background-color: #5F5F5F !important;
+}
+
+.nologin {
+	background-color: #5F5F5F !important;
+}
+
+#tapahtumat_tb {
+	width:100%;
+	border-collapse: separate;
+	border-spacing: 0px;
+}
+
+#tapahtumat_tb tr:hover {background-color: #ddd;}
+
+#tapahtumat_tb th {
+	background-color: #4CAF50;
+	color: white;
+	font-size: 1.1em;
+	padding: 8px;
+	text-align: left;
+	border: 0px solid black;
+	border-bottom: none;
+	padding: 1% 1% 1% 1%;
+}
+
+#aika {
+	border-radius: 5px 0px 0px 0px;
+}
+
+#tapahtuma {
+	border-radius: 0px 5px 0px 0px;
+}
+
+#tapahtumat_tb td {
+	padding: 8px;
+	border: 0px solid black;
+}
+
+#tapahtumat_tb tr.Muutos {
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#tapahtumat_tb tr.MuutosS {
+	cursor: auto !important;
+}
+
+#status {
+	background-color: white;
+	color: red;
+	border: 2px solid red;
+}
+
+a {
+	color: white;
+}
+
+a:link {
+	text-decoration: none;;
+}
+
+@media only screen and (max-width: 1024px) {
+	#center {
+		left: 1%;
+		width: 98%;
+		position: relative;
+	}
+}
