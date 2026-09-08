@@ -7,10 +7,12 @@ CREATE TABLE users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+# username: Test, password: Sala1234#
+
 INSERT INTO users (id, username, password, created_at) VALUES
     (
         1,
-        'Testi',
+        'Test',
         '$2y$12$ccw0UjQ3Mmju3FEBrsGfT.VhXtcJZ64i9b.HW9ZVP3PgkPvuVM7ku',
         '2026-09-08 05:02:28.660923'
     );

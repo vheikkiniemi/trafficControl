@@ -187,7 +187,8 @@ while (true) {
 
         $counter = 20;
 
-        echo "data: " . $lastId . "\n\n";
+        //echo "data: " . $lastId . "\n\n";
+        echo ": keepalive\n\n";
 
         if (ob_get_level() > 0) {
             ob_flush();

@@ -13,7 +13,8 @@ INSERT INTO nodes (id, nodeid, nodekey, password, created_at) VALUES
         1,
         'Home1',
         '08dfcfc0c263d2817400a375869541c7714ed3b11ffb073902a0720eb0e47979',
-        '$2y$12$5W11TWg6rFI92VDlWEzsk.uK7u9bwWUuE5Nby/RpkbSeqOI1oqICK'
+        '$2y$12$5W11TWg6rFI92VDlWEzsk.uK7u9bwWUuE5Nby/RpkbSeqOI1oqICK',
+        '2026-09-08 05:02:28.660923'
     );
 
 SELECT setval(
