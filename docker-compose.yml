@@ -41,15 +41,5 @@ services:
       timeout: 5s
       retries: 10
 
-  #adminer:
-  #  image: adminer:latest
-  #  container_name: legacy-php-adminer
-  #  hostname: legacy-php-adminer
-  #  restart: unless-stopped
-  #  ports:
-  #    - "8081:8080"
-  #  depends_on:
-  #    - db
-
 volumes:
   postgres_data:
