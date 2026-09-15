@@ -8,8 +8,6 @@ Build a virtual machine that simulates the role of a Raspberry Pi as an intellig
 * An XFCE graphical environment similar to Raspberry Pi Desktop
 * Network connectivity
 * SSH remote access
-* Support for Docker, MQTT, and Python
-* The ability to connect an Arduino through USB
 
 ## 1. Required Software
 
@@ -328,25 +326,13 @@ sudo apt install -y \
   curl \
   git \
   nano \
-  vim \
-  python3 \
-  python3-pip \
-  python3-venv \
-  openssh-server \
-  mosquitto \
-  mosquitto-clients
+  openssh-server
 ```
 
 Check the SSH service:
 
 ```bash
 systemctl status ssh
-```
-
-Check the MQTT service:
-
-```bash
-systemctl status mosquitto
 ```
 
 Press `q` to exit the service status view.
@@ -367,60 +353,7 @@ ssh username@192.168.56.101
 
 Replace the username and IP address with your own values.
 
-## 13. Test MQTT
-
-Open two terminal windows in the virtual machine.
-
-In the first terminal, start a subscriber:
-
-```bash
-mosquitto_sub -h localhost -t 'devices/#' -v
-```
-
-In the second terminal, publish a test message:
-
-```bash
-mosquitto_pub \
-  -h localhost \
-  -t devices/demo/temperature \
-  -m '{"value":22.5,"unit":"C"}'
-```
-
-The first terminal should display:
-
-```text
-devices/demo/temperature {"value":22.5,"unit":"C"}
-```
-
-## 14. Prepare for the Arduino Connection
-
-Add the current user to the `dialout` group:
-
-```bash
-sudo usermod -aG dialout "$USER"
-```
-
-Sign out and sign back in.
-
-Check the user’s groups:
-
-```bash
-groups
-```
-
-The output should include:
-
-```text
-dialout
-```
-
-When the Arduino is later connected to the virtual machine, its serial interface will usually appear as:
-
-```text
-/dev/ttyACM0
-```
-
-## 15. Create a Recovery Snapshot
+## 13. Create a Recovery Snapshot
 
 When the environment is working, shut down the virtual machine:
 
@@ -455,11 +388,5 @@ Debian 13 with XFCE
 ├── Raspberry Pi Desktop-style graphical environment
 ├── NAT internet connection
 ├── Separate host-only server network
-├── SSH remote access
-├── Mosquitto MQTT broker
-├── Python
-├── Docker readiness
-└── Arduino USB Serial readiness
+└──  SSH remote access
 ```
-
-The virtual machine does not emulate the Raspberry Pi’s ARM processor or GPIO pins. It simulates the features needed in the course software stack: a Linux server, networking services, MQTT communication, programming, and an Arduino gateway.
