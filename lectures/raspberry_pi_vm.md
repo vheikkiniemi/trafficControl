@@ -156,7 +156,7 @@ Deselect other desktop environments if they are selected:
 ```text
 ☐ GNOME
 ☐ KDE Plasma
-☐ Xfce
+☐ LXDE
 ☐ Cinnamon
 ☐ MATE
 ☐ LXQt
