@@ -144,7 +144,7 @@ Do not publish real passwords or save them in screenshots.
 ```python
 import paho.mqtt.client as mqtt
 
-BROKER = "192.168.1.100"
+BROKER = "<YOUR-BROKER-IP-ADDRESS>"
 PORT = 1883
 TOPIC = "devices/test"
 
@@ -171,7 +171,7 @@ client.disconnect()
 ```python
 import paho.mqtt.client as mqtt
 
-BROKER = "192.168.1.100"
+BROKER = "<YOUR-BROKER-IP-ADDRESS>"
 PORT = 1883
 TOPIC = "devices/test"
 
@@ -231,7 +231,7 @@ The program must:
 ### Expected result
 
 ```text
-Connecting to 192.168.1.100...
+Connecting to <YOUR-BROKER-IP-ADDRESS>...
 Connected to the MQTT broker
 Disconnected
 ```
@@ -678,7 +678,7 @@ every Python MQTT client must provide valid credentials before calling `connect(
 ```python
 import paho.mqtt.client as mqtt
 
-BROKER = "192.168.1.100"
+BROKER = "<YOUR-BROKER-IP-ADDRESS>"
 PORT = 1883
 USERNAME = "mqttuser"
 PASSWORD = "replace-with-password"
@@ -719,7 +719,7 @@ client.connect(BROKER, PORT, 60)
 ```python
 import paho.mqtt.client as mqtt
 
-BROKER = "192.168.1.100"
+BROKER = "<YOUR-BROKER-IP-ADDRESS>"
 PORT = 1883
 USERNAME = "mqttuser"
 PASSWORD = "replace-with-password"
