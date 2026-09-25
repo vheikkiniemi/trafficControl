@@ -122,7 +122,7 @@ The current Paho documentation recommends explicitly selecting callback API vers
 Each program needs the address of your MQTT broker:
 
 ```python
-BROKER = "192.168.1.100"
+BROKER = "<YOUR-BROKER-IP-ADDRESS>"
 PORT = 1883
 GROUP = "mqttuser"
 ```
