@@ -34,6 +34,7 @@ A **table** contains records:
 Run these commands in a terminal with the SQLite command-line tool installed:
 
 ```bash
+sudo apt install sqlite3 # if needed
 sqlite3 messages.db
 ```
 
@@ -65,6 +66,12 @@ CREATE TABLE messages (
 - `received_at` defaults to the current **UTC** time.
 - `payload` stores text, including JSON text.
 - `retained` stores the received MQTT retain flag: `0` = false, `1` = true.
+
+Check if the table was created
+
+```text
+.tables
+```
 
 ## Manage records: CRUD
 
@@ -287,13 +294,15 @@ python -m pip install paho-mqtt
 Replace the broker address, username, password, and topic with your existing MQTT settings.
 
 ```python
+#!/usr/bin/env python3
 import sqlite3
 import paho.mqtt.client as mqtt
 
-BROKER = "192.168.1.100"
+BROKER = "80.186.144.43"
 USERNAME = "ingestor"
 PASSWORD = "replace-with-your-password"
 TOPIC = "devices/lamp/status"
+# TOPIC = "devices/#" 
 
 # Prepare the database.
 connection = sqlite3.connect("messages.db")
