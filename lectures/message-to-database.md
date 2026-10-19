@@ -369,7 +369,7 @@ This example assumes the lamp publishes **text**, such as `ON`, `OFF`, or JSON.
 With the virtual environment activated:
 
 ```bash
-python ingestor.py
+python3 ingestor.py
 ```
 
 Leave it running. Stop it with **Ctrl+C**.
@@ -575,6 +575,39 @@ Use **one Node.js application** to demonstrate both approaches with the existing
 |---|---|
 | `/api/messages` | Messages as JSON |
 | `/messages` | A complete HTML page |
+
+## Install node in Debian
+
+On Debian, the easiest way to get the latest Node.js 24.x release is from the NodeSource repository. Node.js v24.22.0 LTS is available as part of the Node 24 release line.
+
+```bash
+# Remove old version if needed
+sudo apt remove -y nodejs
+ 
+# Install prerequisites
+sudo apt update
+sudo apt install -y curl ca-certificates gnupg
+ 
+# Add NodeSource 24.x repository
+curl -fsSL https://deb.nodesource.com/setup_24.x | sudo bash -
+ 
+# Install Node.js
+sudo apt install -y nodejs
+```
+
+Verify:
+
+```bash
+node -v
+npm -v
+
+Expected output should show something like:
+
+```bash
+v24.22.0
+```
+
+depending on the latest package currently in the 24.x repository.
 
 ## Prepare the application
 
